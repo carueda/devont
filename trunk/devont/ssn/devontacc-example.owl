@@ -2,7 +2,7 @@
 <rdf:RDF
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:devontssn="http://mmisw.org/ont/mmi/devontssn#"
+    xmlns:devontssn="http://mmisw.org/ont/mmi/devontssn/"
     xmlns:devont="http://mmisw.org/ont/mmi/device/"
     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
@@ -17,7 +17,7 @@
   <owl:Ontology rdf:about="http://mmisw.org/ont/mmi/devontssn">
     <owl:imports rdf:resource="http://mmisw.org/ont/mmi/device"/>
   </owl:Ontology>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/devontssn#VaisalaWM30">
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/devontssn/VaisalaWM30">
     <owl:equivalentClass>
       <owl:Restriction>
         <owl:someValuesFrom>
@@ -141,10 +141,6 @@
     >0</devont:hasMinimumRangeValue>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </devont:Range>
-  <devont:Sensor rdf:about="http://mmisw.org/ont/mmi/devontssn#test1">
-    <devont:hasMeasurementCapability rdf:resource="http://mmisw.org/ont/mmi/devontssn/accuracy_10"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </devont:Sensor>
   <devont:MeasurementRange rdf:about="http://mmisw.org/ont/mmi/devontssn/windSpeedMR_2">
     <devont:mcHasRange rdf:resource="http://mmisw.org/ont/mmi/devontssn/range_5"/>
     <devont:hasMeasurementCapabilityCondition rdf:resource="http://mmisw.org/ont/mmi/devontssn/accuracy_10"/>
