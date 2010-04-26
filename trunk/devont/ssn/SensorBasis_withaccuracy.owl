@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:omv="http://omv.ontoware.org/2005/05/ontology#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2009/SSN-XG/Ontologies/"
+    xmlns:omvmmi="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.w3.org/2009/SSN-XG/Ontologies" > 
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/inFieldOfView">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/hasRange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:intersectionOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/withFrequency"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Frequency"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.4</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMinimum"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#observationResult">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdfs:range rdf:resource="#ValueThing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Range_10_60">
+    <hasMinimum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasMinimum>
+    <hasMaximum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</hasMaximum>
+    <rdf:type rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Range"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/hasMeasurmentCapability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/inCondition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Condition_10_60"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:first rdf:nodeID="A6"/>
+    <rdf:rest rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMeasurmentCapability"/>
+    <owl:someValuesFrom rdf:nodeID="A9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Range_0_2">
+    <hasMinimum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasMinimum>
+    <hasMaximum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaximum>
+    <rdf:type rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Range"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#procedure">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdfs:range rdf:resource="#Process"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Accuracy"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/withAccuracy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Process">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process has an output and possibly inputs and, for a composite process, describes the temporal and dataflow dependencies and relationships amongst its parts. (http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms)</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Latency">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/MeasurementCapability">
+    <rdfs:subClassOf rdf:nodeID="A13"/>
+    <rdfs:subClassOf rdf:nodeID="A14"/>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A16"/>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="A19"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/inCondition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#hasInput">
+    <rdfs:range rdf:resource="#Input"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:subPropertyOf rdf:resource="#hasParameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:first rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Range"/>
+    <rdf:rest rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:intersectionOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#ValueThing">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Accuracy">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:rest rdf:nodeID="A20"/>
+    <rdf:first rdf:nodeID="A24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="A26"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/withAccuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="A27"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/inCondition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#hasProperty">
+    <rdfs:domain rdf:resource="#Feature"/>
+    <rdfs:range rdf:resource="#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Sensing">
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensing is a process that results in the estimation, or calculation, of the value of a phenomenon. (http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:intersectionOf rdf:nodeID="A28"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/withAccuracy"/>
+    <owl:someValuesFrom rdf:nodeID="A30"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:first rdf:nodeID="A18"/>
+    <rdf:rest rdf:nodeID="A31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMaximum"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="#SensingDevice">
+    <rdfs:subClassOf rdf:resource="#Sensor"/>
+    <rdfs:subClassOf rdf:resource="#Device"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensing device is a device that implements sensing. (http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Input">
+    <owl:disjointWith rdf:resource="#Output"/>
+    <rdfs:subClassOf rdf:resource="#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Parameter">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Feature">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Observation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/FieldOfView">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:first rdf:nodeID="A32"/>
+    <rdf:rest rdf:nodeID="A33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <owl:oneOf rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Resolution">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Frequency">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Device">
+    <rdfs:subClassOf rdf:resource="#System"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A device is a physical piece of technology - a system in a box. Devices may of course be built of smaller devices and software components (i.e. systems have components). (http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Event">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Condition"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/inCondition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMaximum"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.3</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/hasMaximum">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:onProperty rdf:resource="#hasOutput"/>
+    <owl:someValuesFrom rdf:resource="#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Condition">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#observationResultTime">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:first rdf:nodeID="A36"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/withResolution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasRange"/>
+    <owl:someValuesFrom rdf:nodeID="A37"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#featureOfInterest">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#System">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A38"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems. (http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Resolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/withResolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <omv:uri>http://www.w3.org/2009/SSN-XG/Ontologies</omv:uri>
+    <omv:version>Latest terms per null</omv:version>
+    <omv:creationDate>2010-02-04T23:43:26+0000</omv:creationDate>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+
+	Ontology developed by the W3C Semantic Sensor Networks Incubator Group (SSN-XG)
+	
+	For more information on the group's activities see:
+	http://www.w3.org/2005/Incubator/ssn/
+	and
+	http://www.w3.org/2005/Incubator/ssn/wiki/Main_Page
+
+	This ontology describes sensors and observations, and related concepts.  It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.
+
+	The concepts and structure of the ontology were discussed in the group's meetings and on the mailing list.  See the pages indicated above and http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms.
+	</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/withAccuracy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Accuracy_0_2_percent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#qualityOfObservation">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMinimum"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-0.3</owl:hasValue>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#hasOutput">
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:subPropertyOf rdf:resource="#hasParameter"/>
+    <rdfs:range rdf:resource="#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/FieldOfView"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/inFieldOfView"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Condition_10_60">
+    <hasRange rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Range_10_60"/>
+    <rdf:type rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Condition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <owl:onProperty rdf:resource="#hasSubSystem"/>
+    <owl:someValuesFrom rdf:resource="#System"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMeasurmentCapability"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:first rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Range"/>
+    <rdf:rest rdf:nodeID="A34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Property">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/VaisalaWM30">
+    <rdfs:subClassOf rdf:nodeID="A40"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
+    <rdfs:subClassOf rdf:resource="#SensingDevice"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#hasParameter">
+    <rdfs:range rdf:resource="#Parameter"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#hasSubSystem">
+    <rdfs:range rdf:resource="#System"/>
+    <rdfs:domain rdf:resource="#System"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Output">
+    <rdfs:subClassOf rdf:resource="#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/withFrequency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <owl:onProperty rdf:resource="#implements"/>
+    <owl:someValuesFrom rdf:resource="#Sensing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Sensor">
+    <rdfs:subClassOf rdf:nodeID="A43"/>
+    <owl:equivalentClass rdf:nodeID="A42"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sensor can do (implements) sensing. (http://www.w3.org/2005/Incubator/ssn/wiki/SSN_terms)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="A41"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#implements">
+    <rdfs:range rdf:resource="#Process"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/withLatency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Latency"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/withLatency"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/inMeasurementRange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/hasMinimum">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#observationSamplingTime">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/MeasurementCapability"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasMeasurmentCapability"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/hasRange"/>
+    <owl:someValuesFrom rdf:nodeID="A44"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Accuracy_0_2_percent">
+    <hasRange rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Range_0_2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/Accuracy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/Range">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/inMeasurementRange"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2009/SSN-XG/Ontologies/MeasurementRange"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2009/SSN-XG/Ontologies/MeasurementRange">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#observedProperty">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdfs:range rdf:resource="#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:oneOf rdf:nodeID="A39"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid Composer -->

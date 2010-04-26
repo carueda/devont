@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.w3.org/2009/SSN-XG/Ontologies/SensorBasis.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.w3.org/2009/SSN-XG/Ontologies/SensorBasis.owl">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="System">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Feature">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Parameter">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Event">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ValueThing">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Output">
+    <rdfs:subClassOf rdf:resource="#Parameter"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sensor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Process"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PhysicalSystem">
+    <rdfs:subClassOf rdf:resource="#System"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Process">
+    <rdfs:subClassOf rdf:resource="#System"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Property">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Device">
+    <rdfs:subClassOf rdf:resource="#PhysicalSystem"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Observation">
+    <rdfs:subClassOf rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Input">
+    <owl:disjointWith rdf:resource="#Output"/>
+    <rdfs:subClassOf rdf:resource="#Parameter"/>
+  </owl:Class>
+  <rdf:Property rdf:ID="hasInput">
+    <rdfs:range rdf:resource="#Input"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:ID="hasParameter"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:ID="observationSamplingTime">
+    <rdfs:domain rdf:resource="#Observation"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="qualityOfObservation">
+    <rdfs:domain rdf:resource="#Observation"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="procedure">
+    <rdfs:domain rdf:resource="#Observation"/>
+    <rdfs:range rdf:resource="#Process"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="hasComponent">
+    <rdfs:range rdf:resource="#System"/>
+    <rdfs:domain rdf:resource="#System"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="observationResult">
+    <rdfs:range rdf:resource="#ValueThing"/>
+    <rdfs:domain rdf:resource="#Observation"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="hasOutput">
+    <rdfs:range rdf:resource="#Output"/>
+    <rdfs:domain rdf:resource="#Process"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="#hasParameter"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:ID="hasProperty">
+    <rdfs:range rdf:resource="#Property"/>
+    <rdfs:domain rdf:resource="#Feature"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="playsRole"/>
+  <rdf:Property rdf:about="#hasParameter">
+    <rdfs:range rdf:resource="#Parameter"/>
+    <rdfs:domain rdf:resource="#Process"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="observationResultTime">
+    <rdfs:domain rdf:resource="#Observation"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="observedProperty">
+    <rdfs:range rdf:resource="#Property"/>
+    <rdfs:domain rdf:resource="#Observation"/>
+  </rdf:Property>
+  <rdf:Property rdf:ID="featureOfInterest">
+    <rdfs:range rdf:resource="#Feature"/>
+    <rdfs:domain rdf:resource="#Observation"/>
+  </rdf:Property>
+</rdf:RDF>
+
+<!-- Created with TopBraid Composer -->
