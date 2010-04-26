@@ -1,165 +1,357 @@
 <?xml version="1.0"?>
-<rdf:RDF
-    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-    xmlns:devontssn="http://mmisw.org/ont/mmi/devontssn/"
-    xmlns:devont="http://mmisw.org/ont/mmi/device/"
-    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns="http://mmisw.org/ont/mmi/devontssn/"
-    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
-  xml:base="http://mmisw.org/ont/mmi/devontssn/">
-  <owl:Ontology rdf:about=""/>
-  <owl:Ontology rdf:about="http://mmisw.org/ont/mmi/devontssn">
-    <owl:imports rdf:resource="http://mmisw.org/ont/mmi/device"/>
-  </owl:Ontology>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/devontssn/VaisalaWM30">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:someValuesFrom>
-          <owl:Class>
-            <owl:intersectionOf rdf:parseType="Collection">
-              <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Accuracy"/>
-              <owl:Restriction>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY devont "http://mmisw.org/ont/mmi/device/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY devontssn "http://mmisw.org/ont/mmi/devontssn/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY daml "http://www.daml.org/2001/03/daml+oil#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://mmisw.org/ont/mmi/devontssn/"
+     xml:base="http://mmisw.org/ont/mmi/devontssn/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:devont="http://mmisw.org/ont/mmi/device/"
+     xmlns:devontssn="http://mmisw.org/ont/mmi/devontssn/"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:daml="http://www.daml.org/2001/03/daml+oil#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://mmisw.org/ont/mmi/device"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMeasurementCapability -->
+
+    <owl:ObjectProperty rdf:about="&devont;hasMeasurementCapability"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMeasurementCapabilityCondition -->
+
+    <owl:ObjectProperty rdf:about="&devont;hasMeasurementCapabilityCondition"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasRangeValueType -->
+
+    <owl:ObjectProperty rdf:about="&devont;hasRangeValueType"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/mcHasRange -->
+
+    <owl:ObjectProperty rdf:about="&devont;mcHasRange"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasDataType -->
+
+    <owl:DatatypeProperty rdf:about="&devont;hasDataType"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMaximumRangeValue -->
+
+    <owl:DatatypeProperty rdf:about="&devont;hasMaximumRangeValue"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMinimumRangeValue -->
+
+    <owl:DatatypeProperty rdf:about="&devont;hasMinimumRangeValue"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasUnitsOfMeasure -->
+
+    <owl:DatatypeProperty rdf:about="&devont;hasUnitsOfMeasure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/Accuracy -->
+
+    <owl:Class rdf:about="&devont;Accuracy"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/MeasurementRange -->
+
+    <owl:Class rdf:about="&devont;MeasurementRange"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/OperationalTemperatureRange -->
+
+    <owl:Class rdf:about="&devont;OperationalTemperatureRange"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/Range -->
+
+    <owl:Class rdf:about="&devont;Range"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/Sensor -->
+
+    <owl:Class rdf:about="&devont;Sensor"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/ValueType -->
+
+    <owl:Class rdf:about="&devont;ValueType"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/VaisalaWM30 -->
+
+    <owl:Class rdf:about="VaisalaWM30">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&devont;hasMeasurementCapability"/>
                 <owl:someValuesFrom>
-                  <owl:Class>
-                    <owl:oneOf rdf:parseType="Collection">
-                      <devont:Range rdf:about="http://mmisw.org/ont/mmi/devontssn/range_3">
-                        <devont:hasRangeValueType>
-                          <devont:ValueType rdf:about="http://mmisw.org/ont/mmi/devontssn/percent">
-                            <devont:hasDataType rdf:datatype=
-                            "http://www.w3.org/2001/XMLSchema#string"
-                            >FLOAT</devont:hasDataType>
-                            <devont:hasUnitsOfMeasure rdf:datatype=
-                            "http://www.w3.org/2001/XMLSchema#string"
-                            >%</devont:hasUnitsOfMeasure>
-                            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-                          </devont:ValueType>
-                        </devont:hasRangeValueType>
-                        <devont:hasMaximumRangeValue rdf:datatype=
-                        "http://www.w3.org/2001/XMLSchema#string"
-                        >2</devont:hasMaximumRangeValue>
-                        <devont:hasMinimumRangeValue rdf:datatype=
-                        "http://www.w3.org/2001/XMLSchema#string"
-                        >0</devont:hasMinimumRangeValue>
-                        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-                      </devont:Range>
-                    </owl:oneOf>
-                  </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&devont;Accuracy"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&devont;hasMeasurementCapabilityCondition"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="windSpeedMR_1"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&devont;mcHasRange"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:oneOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="range_3"/>
+                                        </owl:oneOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                 </owl:someValuesFrom>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/mcHasRange"/>
-                </owl:onProperty>
-              </owl:Restriction>
-              <owl:Restriction>
-                <owl:someValuesFrom>
-                  <owl:Class>
-                    <owl:oneOf rdf:parseType="Collection">
-                      <devont:MeasurementRange rdf:about="http://mmisw.org/ont/mmi/devontssn/windSpeedMR_1">
-                        <devont:mcHasRange>
-                          <devont:Range rdf:about="http://mmisw.org/ont/mmi/devontssn/range_4">
-                            <devont:hasRangeValueType>
-                              <devont:ValueType rdf:about="http://mmisw.org/ont/mmi/devontssn/mPerSec">
-                                <devont:hasUnitsOfMeasure rdf:datatype=
-                                "http://www.w3.org/2001/XMLSchema#string"
-                                >m/s</devont:hasUnitsOfMeasure>
-                                <devont:hasDataType rdf:datatype=
-                                "http://www.w3.org/2001/XMLSchema#string"
-                                >FLOAT</devont:hasDataType>
-                                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-                              </devont:ValueType>
-                            </devont:hasRangeValueType>
-                            <devont:hasMaximumRangeValue rdf:datatype=
-                            "http://www.w3.org/2001/XMLSchema#string"
-                            >60</devont:hasMaximumRangeValue>
-                            <devont:hasMinimumRangeValue rdf:datatype=
-                            "http://www.w3.org/2001/XMLSchema#string"
-                            >10</devont:hasMinimumRangeValue>
-                            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-                          </devont:Range>
-                        </devont:mcHasRange>
-                        <devont:hasMeasurementCapabilityCondition>
-                          <devont:Accuracy rdf:about="http://mmisw.org/ont/mmi/devontssn/accuracy_9">
-                            <devont:hasMeasurementCapabilityCondition rdf:resource="http://mmisw.org/ont/mmi/devontssn/windSpeedMR_1"/>
-                            <devont:mcHasRange rdf:resource="http://mmisw.org/ont/mmi/devontssn/range_3"/>
-                            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-                          </devont:Accuracy>
-                        </devont:hasMeasurementCapabilityCondition>
-                        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-                      </devont:MeasurementRange>
-                    </owl:oneOf>
-                  </owl:Class>
-                </owl:someValuesFrom>
-                <owl:onProperty>
-                  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMeasurementCapabilityCondition"/>
-                </owl:onProperty>
-              </owl:Restriction>
-            </owl:intersectionOf>
-          </owl:Class>
-        </owl:someValuesFrom>
-        <owl:onProperty>
-          <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMeasurementCapability"/>
-        </owl:onProperty>
-      </owl:Restriction>
-    </owl:equivalentClass>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Sensor"/>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValueType"/>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/OperationalTemperatureRange"/>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Range"/>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/MeasurementRange"/>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasRangeValueType"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMaximumRangeValue"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDataType"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasUnitsOfMeasure"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMinimumRangeValue"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-  <devont:Accuracy rdf:about="http://mmisw.org/ont/mmi/devontssn/accuracy_10">
-    <devont:mcHasRange>
-      <devont:Range rdf:about="http://mmisw.org/ont/mmi/devontssn/range_6">
-        <devont:hasRangeValueType rdf:resource="http://mmisw.org/ont/mmi/devontssn/mPerSec"/>
-        <devont:hasMaximumRangeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >0.3</devont:hasMaximumRangeValue>
-        <devont:hasMinimumRangeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >-0.3</devont:hasMinimumRangeValue>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-      </devont:Range>
-    </devont:mcHasRange>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </devont:Accuracy>
-  <devont:Range rdf:about="http://mmisw.org/ont/mmi/devontssn/range_5">
-    <devont:hasRangeValueType rdf:resource="http://mmisw.org/ont/mmi/devontssn/mPerSec"/>
-    <devont:hasMaximumRangeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >10</devont:hasMaximumRangeValue>
-    <devont:hasMinimumRangeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >0</devont:hasMinimumRangeValue>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </devont:Range>
-  <devont:MeasurementRange rdf:about="http://mmisw.org/ont/mmi/devontssn/windSpeedMR_2">
-    <devont:mcHasRange rdf:resource="http://mmisw.org/ont/mmi/devontssn/range_5"/>
-    <devont:hasMeasurementCapabilityCondition rdf:resource="http://mmisw.org/ont/mmi/devontssn/accuracy_10"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </devont:MeasurementRange>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
-  <devont:Sensor rdf:about="http://mmisw.org/ont/mmi/devontssn/wind_sensor_wm30_instance_1">
-    <devont:hasMeasurementCapability rdf:resource="http://mmisw.org/ont/mmi/devontssn/windSpeedMR_2"/>
-    <devont:hasMeasurementCapability rdf:resource="http://mmisw.org/ont/mmi/devontssn/windSpeedMR_1"/>
-    <devont:hasMeasurementCapability rdf:resource="http://mmisw.org/ont/mmi/devontssn/accuracy_9"/>
-    <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >http://www.w3.org/2005/Incubator/ssn/wiki/Modelling_of_Accuracy%2C_etc</rdfs:seeAlso>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >An example instance of http://www.vaisala.com/instruments/products/wm30.html</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </devont:Sensor>
-  <devont:OperationalTemperatureRange rdf:about="http://mmisw.org/ont/mmi/devontssn/OperationalTemperatureRange_6">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </devont:OperationalTemperatureRange>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&devont;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#NamedIndividual -->
+
+    <owl:Class rdf:about="&owl;NamedIndividual"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/OperationalTemperatureRange_6 -->
+
+    <owl:NamedIndividual rdf:about="OperationalTemperatureRange_6">
+        <rdf:type rdf:resource="&devont;OperationalTemperatureRange"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/accuracy_10 -->
+
+    <devont:Accuracy rdf:about="accuracy_10">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <devont:mcHasRange rdf:resource="range_6"/>
+        <devont:hasMeasurementCapabilityCondition rdf:resource="windSpeedMR_2"/>
+    </devont:Accuracy>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/accuracy_9 -->
+
+    <owl:NamedIndividual rdf:about="accuracy_9">
+        <rdf:type rdf:resource="&devont;Accuracy"/>
+        <devont:mcHasRange rdf:resource="range_3"/>
+        <devont:hasMeasurementCapabilityCondition rdf:resource="windSpeedMR_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/mPerSec -->
+
+    <devont:ValueType rdf:about="mPerSec">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <devont:hasDataType rdf:datatype="&xsd;string">FLOAT</devont:hasDataType>
+        <devont:hasUnitsOfMeasure rdf:datatype="&xsd;string">m/s</devont:hasUnitsOfMeasure>
+    </devont:ValueType>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/percent -->
+
+    <owl:NamedIndividual rdf:about="percent">
+        <rdf:type rdf:resource="&devont;ValueType"/>
+        <devont:hasUnitsOfMeasure rdf:datatype="&xsd;string">%</devont:hasUnitsOfMeasure>
+        <devont:hasDataType rdf:datatype="&xsd;string">FLOAT</devont:hasDataType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_3 -->
+
+    <devont:Range rdf:about="range_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <devont:hasMinimumRangeValue rdf:datatype="&xsd;string">0</devont:hasMinimumRangeValue>
+        <devont:hasMaximumRangeValue rdf:datatype="&xsd;string">2</devont:hasMaximumRangeValue>
+        <devont:hasRangeValueType rdf:resource="percent"/>
+    </devont:Range>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_4 -->
+
+    <devont:Range rdf:about="range_4">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <devont:hasMinimumRangeValue rdf:datatype="&xsd;string">10</devont:hasMinimumRangeValue>
+        <devont:hasMaximumRangeValue rdf:datatype="&xsd;string">60</devont:hasMaximumRangeValue>
+        <devont:hasRangeValueType rdf:resource="mPerSec"/>
+    </devont:Range>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_5 -->
+
+    <owl:NamedIndividual rdf:about="range_5">
+        <rdf:type rdf:resource="&devont;Range"/>
+        <devont:hasMinimumRangeValue rdf:datatype="&xsd;string">0</devont:hasMinimumRangeValue>
+        <devont:hasMaximumRangeValue rdf:datatype="&xsd;string">10</devont:hasMaximumRangeValue>
+        <devont:hasRangeValueType rdf:resource="mPerSec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_6 -->
+
+    <owl:NamedIndividual rdf:about="range_6">
+        <rdf:type rdf:resource="&devont;Range"/>
+        <devont:hasMinimumRangeValue rdf:datatype="&xsd;string">-0.3</devont:hasMinimumRangeValue>
+        <devont:hasMaximumRangeValue rdf:datatype="&xsd;string">0.3</devont:hasMaximumRangeValue>
+        <devont:hasRangeValueType rdf:resource="mPerSec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/windSpeedMR_1 -->
+
+    <devont:MeasurementRange rdf:about="windSpeedMR_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <devont:hasMeasurementCapabilityCondition rdf:resource="accuracy_9"/>
+        <devont:mcHasRange rdf:resource="range_4"/>
+    </devont:MeasurementRange>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/windSpeedMR_2 -->
+
+    <devont:MeasurementRange rdf:about="windSpeedMR_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <devont:hasMeasurementCapabilityCondition rdf:resource="accuracy_10"/>
+        <devont:mcHasRange rdf:resource="range_5"/>
+    </devont:MeasurementRange>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/wind_sensor_wm30_instance_1 -->
+
+    <devont:Sensor rdf:about="wind_sensor_wm30_instance_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An example instance of http://www.vaisala.com/instruments/products/wm30.html</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;string"
+            >http://www.w3.org/2005/Incubator/ssn/wiki/Modelling_of_Accuracy%2C_etc</rdfs:seeAlso>
+        <devont:hasMeasurementCapability rdf:resource="accuracy_10"/>
+        <devont:hasMeasurementCapability rdf:resource="accuracy_9"/>
+        <devont:hasMeasurementCapability rdf:resource="windSpeedMR_1"/>
+        <devont:hasMeasurementCapability rdf:resource="windSpeedMR_2"/>
+    </devont:Sensor>
 </rdf:RDF>
 
-<!-- Created with TopBraid Composer -->
+
+
+<!-- Generated by the OWL API (version 2.2.1.842) http://owlapi.sourceforge.net -->
+
