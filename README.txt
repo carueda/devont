@@ -16,3 +16,5 @@ device/
     NOTE: The initial commit to the devont project at Google Code contains the latest version
     of these files at SourceForge as of 1/4/2010
     
+ssn/
+	artifacts developed in interaction with the SSN group
