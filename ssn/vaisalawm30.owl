@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY device "http://mmisw.org/ont/mmi/device/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY devontssn "http://mmisw.org/ont/mmi/devontssn/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://mmisw.org/ont/mmi/devontssn/"
+     xml:base="http://mmisw.org/ont/mmi/devontssn/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:device="http://mmisw.org/ont/mmi/device/"
+     xmlns:devontssn="http://mmisw.org/ont/mmi/devontssn/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://mmisw.org/ont/mmi/device"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMeasurementCapability -->
+
+    <owl:ObjectProperty rdf:about="&device;hasMeasurementCapability"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMeasurementCapabilityCondition -->
+
+    <owl:ObjectProperty rdf:about="&device;hasMeasurementCapabilityCondition"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasRangeValueType -->
+
+    <owl:ObjectProperty rdf:about="&device;hasRangeValueType"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/mcHasRange -->
+
+    <owl:ObjectProperty rdf:about="&device;mcHasRange"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMaximumRangeValue -->
+
+    <owl:DatatypeProperty rdf:about="&device;hasMaximumRangeValue"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/hasMinimumRangeValue -->
+
+    <owl:DatatypeProperty rdf:about="&device;hasMinimumRangeValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/Accuracy -->
+
+    <owl:Class rdf:about="&device;Accuracy"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/MeasurementRange -->
+
+    <owl:Class rdf:about="&device;MeasurementRange"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/Range -->
+
+    <owl:Class rdf:about="&device;Range"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/Sensor -->
+
+    <owl:Class rdf:about="&device;Sensor"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/VaisalaWM30 -->
+
+    <owl:Class rdf:about="VaisalaWM30">
+        <rdfs:subClassOf rdf:resource="&device;Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&device;hasMeasurementCapability"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="accuracy_10"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&device;hasMeasurementCapability"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="accuracy_9"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&device;hasMeasurementCapability"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="windSpeedMR_1"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&device;hasMeasurementCapability"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:oneOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="windSpeedMR_2"/>
+                                </owl:oneOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#NamedIndividual -->
+
+    <owl:Class rdf:about="&owl;NamedIndividual"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/mPerSec -->
+
+    <rdf:Description rdf:about="&device;mPerSec"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/device/percent -->
+
+    <rdf:Description rdf:about="&device;percent"/>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/accuracy_10 -->
+
+    <device:Accuracy rdf:about="accuracy_10">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <device:mcHasRange rdf:resource="range_6"/>
+        <device:hasMeasurementCapabilityCondition rdf:resource="windSpeedMR_2"/>
+    </device:Accuracy>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/accuracy_9 -->
+
+    <owl:NamedIndividual rdf:about="accuracy_9">
+        <rdf:type rdf:resource="&device;Accuracy"/>
+        <device:mcHasRange rdf:resource="range_3"/>
+        <device:hasMeasurementCapabilityCondition rdf:resource="windSpeedMR_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_3 -->
+
+    <device:Range rdf:about="range_3">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <device:hasMinimumRangeValue rdf:datatype="&xsd;string">0</device:hasMinimumRangeValue>
+        <device:hasMaximumRangeValue rdf:datatype="&xsd;string">2</device:hasMaximumRangeValue>
+        <device:hasRangeValueType rdf:resource="&device;percent"/>
+    </device:Range>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_4 -->
+
+    <device:Range rdf:about="range_4">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <device:hasMinimumRangeValue rdf:datatype="&xsd;string">10</device:hasMinimumRangeValue>
+        <device:hasMaximumRangeValue rdf:datatype="&xsd;string">60</device:hasMaximumRangeValue>
+        <device:hasRangeValueType rdf:resource="&device;mPerSec"/>
+    </device:Range>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_5 -->
+
+    <owl:NamedIndividual rdf:about="range_5">
+        <rdf:type rdf:resource="&device;Range"/>
+        <device:hasMinimumRangeValue rdf:datatype="&xsd;string">0</device:hasMinimumRangeValue>
+        <device:hasMaximumRangeValue rdf:datatype="&xsd;string">10</device:hasMaximumRangeValue>
+        <device:hasRangeValueType rdf:resource="&device;mPerSec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/range_6 -->
+
+    <owl:NamedIndividual rdf:about="range_6">
+        <rdf:type rdf:resource="&device;Range"/>
+        <device:hasMinimumRangeValue rdf:datatype="&xsd;string">-0.3</device:hasMinimumRangeValue>
+        <device:hasMaximumRangeValue rdf:datatype="&xsd;string">0.3</device:hasMaximumRangeValue>
+        <device:hasRangeValueType rdf:resource="&device;mPerSec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/windSpeedMR_1 -->
+
+    <device:MeasurementRange rdf:about="windSpeedMR_1">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <device:hasMeasurementCapabilityCondition rdf:resource="accuracy_9"/>
+        <device:mcHasRange rdf:resource="range_4"/>
+    </device:MeasurementRange>
+    
+
+
+    <!-- http://mmisw.org/ont/mmi/devontssn/windSpeedMR_2 -->
+
+    <device:MeasurementRange rdf:about="windSpeedMR_2">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <device:hasMeasurementCapabilityCondition rdf:resource="accuracy_10"/>
+        <device:mcHasRange rdf:resource="range_5"/>
+    </device:MeasurementRange>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.842) http://owlapi.sourceforge.net -->
+
