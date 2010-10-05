@@ -5,9 +5,11 @@ ont2png=~/bin/ont2png.sh
 
 SEPARATE="http://mmisw.org/ont/mmi/device/{TypedValue,PhysicalProperty,ModelID,Manufacturer,Platform}"
 
-${ont2png} --separate ${SEPARATE} http://mmisw.org/ont/mmi/device
+SOURCERANK="http://mmisw.org/ont/mmi/device/{Component,TypedValue,PhysicalProperty,ModelID,Manufacturer}"
 
-#${ont2png} --separate ${SEPARATE} file:device.owl
+${ont2png} --separate ${SEPARATE} --sourceRank ${SOURCERANK} http://mmisw.org/ont/mmi/device
+
+#${ont2png} --separate ${SEPARATE} --sourceRank ${SOURCERANK} file:device.owl
 
 #${ont2png} --separate ${SEPARATE} file:device2.owl
 
