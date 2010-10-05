@@ -24,6 +24,8 @@
     >MMI Device Ontology Team</omvmmi:hasContentCreator>
     <omv:hasContributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Carlos Rueda, Bruce Andrews, Nan Galbraith, Bob Arko, Luis Bermudez, John Graybeal, Roy Lowry, Bob Morris, Barry Tao, Jesper Zedlitz</omv:hasContributor>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Ontology developed by the Marine Metadata Interoperability Project, http://marinemetadata.org</dc:description>
     <omv:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >http://marinemetadata.org/community/teams/ontdevices</omv:reference>
     <omv:version rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -36,8 +38,6 @@
     >Carlos Rueda</omv:hasCreator>
     <omvmmi:creditRequired rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >not specified</omvmmi:creditRequired>
-    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >2009-04-13T19:35:09+0000</dc:date>
     <omv:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Device Ontology developed by the Marine Metadata Project, http://marinemetadata.org</omv:description>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -46,16 +46,14 @@
     >MMI Device Ontology</omv:name>
     <omvmmi:origMaintainerCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >mmi</omvmmi:origMaintainerCode>
-    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Device Ontology developed by the Marine Metadata Project, http://marinemetadata.org</dc:description>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Device Ontology developed by the Marine Metadata Interoperability Project, http://marinemetadata.org</rdfs:comment>
     <omv:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >2010-06-22T06:21:27+0000</omv:creationDate>
     <omvmmi:hasResourceType rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >sensor</omvmmi:hasResourceType>
     <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Carlos Rueda, Bruce Andrews, Nan Galbraith, Bob Arko, Luis Bermudez, John Graybeal, Roy Lowry, Bob Morris, Barry Tao, Jesper Zedlitz</dc:contributor>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Device Ontology developed by the Marine Metadata Project, http://marinemetadata.org.</rdfs:comment>
     <omv:documentation rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >http://marinemetadata.org/community/teams/ontdevices</omv:documentation>
     <omv:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -65,10 +63,6 @@
     <omv:keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >device, sensor, marine</omv:keywords>
   </owl:Ontology>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/AppliedOperationalProcedure">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Instances of this class represent concrete execution of operational procedures.</rdfs:comment>
-  </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/OperationalProcedure">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Represents any procedure that can be applied to devices, for example, calibration, quality assurance, maitenance.</rdfs:comment>
@@ -138,29 +132,25 @@
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Component"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/OperationalRange">
+    <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/OperationalRestriction"/>
+  </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/CalibrationSchedule">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
     </rdfs:subClassOf>
-  </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/OperationalRange">
-    <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/OperationalRestriction"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Deployment">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >association of an entity to another entity (as for example, a device to a parent platform, or to an observation campaign), for a determinable period of time</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/MinimumOnTime">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/CalibrationValue"/>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/DataStorageCapacity">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/CalibrationValue"/>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/MeasurementCapability">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Capability"/>
@@ -173,9 +163,9 @@
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/TemperatureTolerance">
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/PowerRequirement">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/EnvironmentalToleranceLimit"/>
+      <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Material">
@@ -183,9 +173,9 @@
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/PhysicalProperty"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/PowerRequirement">
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/TemperatureTolerance">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
+      <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/EnvironmentalToleranceLimit"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/SprayTolerance">
@@ -225,14 +215,14 @@
     >Represents a quality assurance procedure.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
   </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Issue">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Represents device issues, eg., performance and quality issues.</rdfs:comment>
-  </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/MaintenanceProcedure">
     <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Represents a maintenance procedure.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Issue">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Represents device issues, eg., performance and quality issues.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/PhysicalModification">
     <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationAdjustment"/>
@@ -254,16 +244,16 @@
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/SelfPoweredOperationTime">
     <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
   </owl:Class>
+  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/TypedValue">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Represents a typed value, that is a value with a certain type including units of measure. The value may be a single (scalar, atomic) value, a range of values, a vector, or other form of value.</rdfs:comment>
+  </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ProcessOutput">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Property"/>
     </rdfs:subClassOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Any information that is reported from a process.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/TypedValue">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Represents a typed value, that is a value with a certain type including units of measure. The value may be a single (scalar, atomic) value, a range of values, a vector, or other form of value.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Component">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -308,27 +298,11 @@
   <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/PressureTolerance">
     <rdfs:subClassOf rdf:resource="http://mmisw.org/ont/mmi/device/EnvironmentalToleranceLimit"/>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/appliedOperationalProcedureSystem">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/AppliedOperationalProcedure"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >system</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasSystemDimension">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasDimension</rdfs:label>
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Dimension"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/appliesToProcedure">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Procedure associated with an operational procedure schedule</rdfs:comment>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/deployedDevice">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Deployment"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/canBeDeployedOn">
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Platform"/>
@@ -353,22 +327,18 @@
     >hasCondition</rdfs:label>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/MeasurementCapability"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDeployment">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Deployment"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/resultsInCalibrationAdjustment">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationAdjustment"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationProcedure"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >resultsIn</rdfs:label>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/appliesToCalibrationProcedure">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationSchedule"/>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationProcedure"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >calibrationProcedure</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/resultsInCalibrationAdjustment">
+    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationAdjustment"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationProcedure"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >resultsIn</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMeasurementCapability">
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/MeasurementCapability"/>
@@ -391,9 +361,12 @@
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Medium"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasIssue">
+  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDeviceWeight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Issue"/>
+    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Weight"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hasWeight</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasValueType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -402,18 +375,9 @@
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >The qualified type for the value.</rdfs:comment>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasSystemWeight">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasIssue">
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasWeight</rdfs:label>
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Weight"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalProcedure">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >procedure</rdfs:label>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/AppliedOperationalProcedure"/>
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
+    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Issue"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasManufacturer">
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Manufacturer"/>
@@ -425,12 +389,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/ModelID"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasAppliedOperationalProcedure">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/AppliedOperationalProcedure"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >appliedOperationalProcedure</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalRestriction">
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/OperationalRestriction"/>
@@ -456,15 +414,11 @@
           <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/MeasurementCapability"/>
           <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/EnvironmentalToleranceLimit"/>
           <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/ValuedPhysicalProperty"/>
-          <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/CalibrationValue"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/etlHasRange">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Range"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >range</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The associated value.</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasEnvironmentalToleranceLimit">
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -472,14 +426,24 @@
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/EnvironmentalToleranceLimit"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasPhysicalPropValue">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/TypedValue"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Value of the physical property.</rdfs:comment>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasConstructionMaterial">
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Material"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDeviceDimension">
+    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Dimension"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hasDimension</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDataType">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >datatype</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The data type of the ValueType</rdfs:comment>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/ValueType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasModelIDSynonym">
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/ModelID"/>
@@ -492,19 +456,9 @@
     >hasSynonym</rdfs:label>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/ModelID"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDataType">
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >datatype</rdfs:label>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The data type of the ValueType</rdfs:comment>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/ValueType"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasLocation">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Deployment"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The geo-location associated with the deployment.</rdfs:comment>
+  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOutput">
+    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/ProcessOutput"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Process"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalProcedureSchedule">
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
@@ -512,193 +466,12 @@
     >Operational procedure schedule associated with the device</rdfs:comment>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOutput">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/ProcessOutput"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Process"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasBasePlatform">
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Platform"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Deployment"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDeployedMedium">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The medium in which the system is currently deployed.</rdfs:comment>
-    <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/Medium"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://mmisw.org/ont/mmi/device/producesCalibrationValue">
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationProcedure"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >produces</rdfs:label>
     <rdfs:range rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationValue"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/shortNameUri"/>
-  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#version"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMinimumFrequency">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalProcedureCompletion">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasCompletion</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
-    <rdfs:range>
-      <owl:DataRange>
-        <owl:oneOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >successful</rdf:first>
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-              >unsuccessful</rdf:first>
-            </rdf:rest>
-          </rdf:rest>
-          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >incomplete</rdf:first>
-        </owl:oneOf>
-      </owl:DataRange>
-    </rdfs:range>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasEnforcementQuality">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
-    <rdfs:range>
-      <owl:DataRange>
-        <owl:oneOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >required</rdf:first>
-          </rdf:rest>
-          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >recommended</rdf:first>
-        </owl:oneOf>
-      </owl:DataRange>
-    </rdfs:range>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasUnitsOfMeasure">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/ValueType"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >uom</rdfs:label>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasSensingMethod">
-    <rdfs:range>
-      <owl:DataRange>
-        <owl:oneOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-              >remote</rdf:first>
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:rest>
-            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >in-situ at distance</rdf:first>
-          </rdf:rest>
-          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >in-situ by contact</rdf:first>
-        </owl:oneOf>
-      </owl:DataRange>
-    </rdfs:range>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Sensor"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasWeightUnits">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasUnits</rdfs:label>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/hasContentCreator"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOriginalName">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasName</rdfs:label>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Manufacturer"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/origMaintainerCode"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasProvider">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
-    <rdfs:range>
-      <owl:DataRange>
-        <owl:oneOf rdf:parseType="Resource">
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-              >other</rdf:first>
-              <rdf:rest rdf:parseType="Resource">
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-                >scientist</rdf:first>
-              </rdf:rest>
-            </rdf:rest>
-            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >operator</rdf:first>
-          </rdf:rest>
-          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >manufacturer</rdf:first>
-        </owl:oneOf>
-      </owl:DataRange>
-    </rdfs:range>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/isConsumableSystem">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >isConsumable</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/endDeploymentDate">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >the end date of the deployment</rdfs:comment>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Deployment"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >endDate</rdfs:label>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#creationDate"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/origVocManager"/>
-  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#reference"/>
-  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasCreator"/>
-  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#name"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/producesOperationalProcedureLog">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >producesLog</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >free text describing the activities and/or results of the procedure</rdfs:comment>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/contact"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasWebSite">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Manufacturer"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasPointOfContact">
-    <rdfs:domain>
-      <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-          <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Manufacturer"/>
-          <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Component"/>
-        </owl:unionOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/appliedOperationalProcedureDate">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >date</rdfs:label>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/AppliedOperationalProcedure"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The date where a particular operational procedure was applied</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDimensionName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Dimension"/>
@@ -706,16 +479,14 @@
     >hasName</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/startDeploymentDate">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >the start date of the deployment</rdfs:comment>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Deployment"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >startDate</rdfs:label>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/shortNameUri"/>
+  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#version"/>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMinimumFrequency">
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym"/>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasEngagement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:range>
@@ -733,24 +504,54 @@
     </rdfs:range>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Sensor"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalProcedureUniqueId">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasEnforcementQuality">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasUniqueId</rdfs:label>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >recommended</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >required</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasWeightValue">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasValue</rdfs:label>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasUnitsOfMeasure">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/ValueType"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >uom</rdfs:label>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMinimumRangeValue">
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >minValue</rdfs:label>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Range"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasSensingMethod">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >in-situ at distance</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >remote</rdf:first>
+            </rdf:rest>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >in-situ by contact</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Sensor"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasMaximumRangeValue">
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Range"/>
@@ -766,6 +567,49 @@
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalProcedureDescription">
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >hasDescription</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedure"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/hasContentCreator"/>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/origMaintainerCode"/>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOriginalName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >hasName</rdfs:label>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Manufacturer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasProvider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/OperationalProcedureSchedule"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >operator</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >scientist</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >other</rdf:first>
+            </rdf:rest>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >manufacturer</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/isConsumableSystem">
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >isConsumable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/modelID">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -775,66 +619,34 @@
     >The model identification of the system. This is functional because a system should have at most one identification. Note, however, that the model identification itself can have multiple synonyms.</rdfs:comment>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#keywords"/>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOperationalProcedureLabel">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasLabel</rdfs:label>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/hasResourceType"/>
+  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#creationDate"/>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasConsequence">
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/EnvironmentalToleranceLimit"/>
     <rdfs:range>
       <owl:DataRange>
         <owl:oneOf rdf:parseType="Resource">
-          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >damaged</rdf:first>
           <rdf:rest rdf:parseType="Resource">
             <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
             >stopped working</rdf:first>
             <rdf:rest rdf:parseType="Resource">
-              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-              >unreliable measurements</rdf:first>
               <rdf:rest rdf:parseType="Resource">
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                 <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
                 >destroyed</rdf:first>
               </rdf:rest>
-            </rdf:rest>
-          </rdf:rest>
-        </owl:oneOf>
-      </owl:DataRange>
-    </rdfs:range>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasFunctionalityStatus">
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:range>
-      <owl:DataRange>
-        <owl:oneOf rdf:parseType="Resource">
-          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-          >broken</rdf:first>
-          <rdf:rest rdf:parseType="Resource">
-            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-            >calibrated</rdf:first>
-            <rdf:rest rdf:parseType="Resource">
-              <rdf:rest rdf:parseType="Resource">
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-                >verified</rdf:first>
-              </rdf:rest>
               <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-              >operational</rdf:first>
+              >unreliable measurements</rdf:first>
             </rdf:rest>
           </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >damaged</rdf:first>
         </owl:oneOf>
       </owl:DataRange>
     </rdfs:range>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDimensionUnits">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasUnits</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/origVocManager"/>
+  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#reference"/>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasCalibrationValueName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -843,6 +655,8 @@
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationValue"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/creditRequired"/>
+  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasCreator"/>
+  <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#name"/>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/contactRole"/>
   <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasContributor"/>
   <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#uri"/>
@@ -850,6 +664,11 @@
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#description"/>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasWebSite">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Manufacturer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/contact"/>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasSerialNumber">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -857,12 +676,16 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Device"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasCalibrationValueCount">
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasCount</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/CalibrationValue"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasPointOfContact">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Manufacturer"/>
+          <owl:Class rdf:about="http://mmisw.org/ont/mmi/device/Component"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/device/hasOmissionConsequence">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -876,19 +699,6 @@
     >Owner of the system instance.</rdfs:comment>
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Component"/>
   </owl:DatatypeProperty>
-  <owl:FunctionalProperty rdf:about="http://mmisw.org/ont/mmi/device/hasDimensionValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >hasValue</rdfs:label>
-  </owl:FunctionalProperty>
-  <owl:FunctionalProperty rdf:about="http://mmisw.org/ont/mmi/device/hasUniqueIdentifier">
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >The unique identifier of the system.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Component"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </owl:FunctionalProperty>
   <owl:FunctionalProperty rdf:about="http://mmisw.org/ont/mmi/device/theValue">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >The actual value as a datatype element.</rdfs:comment>
@@ -896,6 +706,13 @@
     <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/SimpleValue"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >value</rdfs:label>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://mmisw.org/ont/mmi/device/hasUniqueIdentifier">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The unique identifier of the system.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/device/Component"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </owl:FunctionalProperty>
   <ValueType rdf:about="http://mmisw.org/ont/mmi/device/mPerSec">
     <hasDataType rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
